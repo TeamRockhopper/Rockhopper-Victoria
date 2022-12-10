@@ -207,7 +207,7 @@ app.post('/', verifyPostData, async function (req, res) {
 		const out = fs.openSync(logfile, 'a');
 		const err = fs.openSync(logfile, 'a');
 		// TODO: this needs to be patched.
-		spawn('java', [ '-Dfml.queryResult=confirm', '-server', '-XX:+UseG1GC', '-XX:MaxGCPauseMillis=100', '-XX:+UseStringDeduplication', '-XX:+UseAES', '-XX:+UseAESIntrinsics', '-Xmx13G', '-Xms8G', '-XX:UseSSE=3', '-jar', 'modpack.jar', 'nogui' ], {
+		spawn('run.sh', [ ], {
 			cwd: '/home/tim/mc-victoria-18/',
 			detached: true,
 			stdio: [ 'ignore', out, err ]
@@ -264,7 +264,7 @@ const heartbeatFunction = async function () {
 		const logfile = 'spawned-server.log';
 		const out = fs.openSync(logfile, 'a');
 		const err = fs.openSync(logfile, 'a');
-		spawn('java', [ '-Dfml.queryResult=confirm', '-server', '-XX:+UseG1GC', '-XX:MaxGCPauseMillis=100', '-XX:+UseStringDeduplication', '-XX:+UseAES', '-XX:+UseAESIntrinsics', '-Xmx13G', '-Xms8G', '-XX:UseSSE=3', '-jar', 'modpack.jar', 'nogui' ], {
+		spawn('run.sh', [ ], {
 			cwd: '/home/tim/mc-victoria-18/',
 			detached: true,
 			stdio: [ 'ignore', out, err ]
