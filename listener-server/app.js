@@ -95,8 +95,8 @@ app.post('/', verifyPostData, async function (req, res) {
 		console.log(`  >  Pulled most recent files from git ...`);
 
 		// The Discord chat bot's token is sensitive, so it must be inserted later.
-		// await execShellCommand(`sed -i '22s/.*/        token="${DISCORD_BOT_TOKEN}"/' ../modpack-files/src/config/_SERVER/shadowfacts/DiscordChat/DiscordChat.conf`);
-		// console.log(`  > Injecting Discord bot token ...`);
+		await execShellCommand(`sed -i '22s/.*/  botToken = "${DISCORD_BOT_TOKEN}"/' ../modpack-files/src/config/_SERVER/Discord-Integration.toml`);
+		console.log(`  > Injecting Discord bot token ...`);
 
 		// Install any potentially-new dependencies.
 		await execShellCommand('npm install');
