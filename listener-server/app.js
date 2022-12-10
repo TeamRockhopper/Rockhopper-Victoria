@@ -207,7 +207,11 @@ app.post('/', verifyPostData, async function (req, res) {
 		const out = fs.openSync(logfile, 'a');
 		const err = fs.openSync(logfile, 'a');
 		// TODO: this needs to be patched.
-		spawn('run.sh', [ ], {
+		spawn('java', [
+			'@user_jvm_args.txt',
+			'@libraries/net/minecraftforge/forge/1.18.2-40.1.86/unix_args.txt',
+			`"$@"`
+		], {
 			cwd: '/home/tim/mc-victoria-18/',
 			detached: true,
 			stdio: [ 'ignore', out, err ]
@@ -264,7 +268,11 @@ const heartbeatFunction = async function () {
 		const logfile = 'spawned-server.log';
 		const out = fs.openSync(logfile, 'a');
 		const err = fs.openSync(logfile, 'a');
-		spawn('run.sh', [ ], {
+		spawn('java', [
+			'@user_jvm_args.txt',
+			'@libraries/net/minecraftforge/forge/1.18.2-40.1.86/unix_args.txt',
+			`"$@"`
+		], {
 			cwd: '/home/tim/mc-victoria-18/',
 			detached: true,
 			stdio: [ 'ignore', out, err ]
