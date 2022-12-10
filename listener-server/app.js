@@ -107,7 +107,7 @@ app.post('/', verifyPostData, async function (req, res) {
 		console.log(`  >  Removed old local modpack build files ...`);
 
 		// Build the updated modpack into files for uploading.
-		await execShellCommand(`java -jar ../launcher/builder.jar --version "${commitId}" --input ../modpack-files/ --output upload --manifest-dest "upload/rockhopper-create.json"`);
+		await execShellCommand(`java -jar ../launcher/builder.jar --version "${commitId}" --input ../modpack-files/ --output upload --manifest-dest "upload/rockhopper-victoria.json"`);
 		console.log(`  >  Built updated modpack ...`);
 
 		// Create a package listing for the updated modpack.
@@ -194,12 +194,12 @@ app.post('/', verifyPostData, async function (req, res) {
 		}
 
 		// Delete the mods and configuration files that are present on the server.
-		await execShellCommand('rm -rf ~/mc-create-18/mods/');
-		await execShellCommand('rm -rf ~/mc-create-18/config/');
+		await execShellCommand('rm -rf ~/mc-victoria-18/mods/');
+		await execShellCommand('rm -rf ~/mc-victoria-18/config/');
 		console.log(`  >  Removed mods and configuration files from the server ...`);
 
 		// Copy the newly-packaged server content into the server.
-		await execShellCommand('cp -a server-upload/. ~/mc-create-18');
+		await execShellCommand('cp -a server-upload/. ~/mc-victoria-18');
 		console.log(`  >  Copied new server content to the server ...`);
 
 		// Restart the Minecraft server.
