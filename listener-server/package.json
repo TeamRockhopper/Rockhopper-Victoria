@@ -1,0 +1,37 @@
+{
+  "name": "webhook-build-server",
+  "version": "1.0.0",
+  "description": "A simple webhook server modified from an express server boilerplate configured for easy use in my future projects.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimTinkers/General-Express-Server.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "server"
+  ],
+  "author": "Tim Clancy",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/TimTinkers/General-Express-Server/issues"
+  },
+  "homepage": "https://github.com/TimTinkers/General-Express-Server#readme",
+  "standard": {
+    "globals": [
+      "$",
+      "THREE"
+    ]
+  },
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "fs-extra": "^9.0.1",
+    "rcon-client": "^4.2.3"
+  }
+}
