@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "1af51701-abea-4fb2-b77d-7df57cf751cd",
+    "name": "Ringneck",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "3e883c84-9d48-4500-8436-808679b0917a",
+    "name": "Jysithra",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  }
+]
