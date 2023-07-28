@@ -60,7 +60,7 @@
 	potionRegen = 5
 	#Max mana bonus per glyph
 	#Range: > 0
-	glyphmax = 15
+	glyphmax = 5
 	#(enchantment) Mana regen per second per level
 	#Range: > 0
 	manaRegenEnchantment = 0.5
